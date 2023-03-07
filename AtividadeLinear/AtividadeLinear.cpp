@@ -12,7 +12,7 @@ void buscarElemento();
 //--------------------------
 
 
-const int MAX = 2;;
+const int MAX = 2;
 int lista[MAX]{};
 int nElementos = 0;
 
@@ -99,10 +99,26 @@ void inserirElemento()
 		cout << "Lista cheia";
 	}
 
+
 }
 
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int busca;
+	int p = -1;
+	cout << "Digite o valor a ser encontrado: " << endl;
+	cin >> busca;
 
+	for (int x = 0; x < nElementos; x++)
+	{
+		if (busca == lista[x]) {
+			cout << "Posicao: " << x << endl;
+			p = x;
+		}
+	}
+
+	if (p == -1) {
+		cout << "Nao encontrado \n";
+}	
 }
